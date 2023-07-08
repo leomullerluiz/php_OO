@@ -14,7 +14,7 @@
 
     }
 
-    //Instanciar classe => Objeto
+    //Instanciar classe = "Criar" Objeto
     $fulano = new Pessoa();
 
     //Acessar Atributos
