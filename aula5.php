@@ -1,7 +1,7 @@
 <?php
     //Modificadores de acesso
     
-    //public - Atributos e funções são acessíveis de dentro e fora do escopo da classe 
+    //public - Atributos e métodos são acessíveis de dentro e fora do escopo da classe 
     //private - Atributo é acessível apenas no escopo da classe inicial, não é acessível as classes 'extendidas'
     //protected - Acessível apenas dentro do escopo da classe
 
