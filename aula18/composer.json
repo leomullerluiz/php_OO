@@ -1,0 +1,13 @@
+{
+    "name": "leonan/composer",
+    "description": "Teste Composer",
+    "require": {
+        "dompdf/dompdf": "^0.6.2",
+        "pagseguro/pagseguro-php-sdk": "^4.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Leonan\\Composer\\": "src/"
+        }
+    }
+}
