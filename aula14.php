@@ -1,20 +1,14 @@
 <?php
     // Associação
-
+    // Quando um objeto utiliza dados de outro objeto
     class Pedido{
-
         public $num;
         public $cliente;
-
-
-
     }
 
     class Cliente{
-
         public $nome;
         public $endereco;
-
     }
 
     $cliente = new Cliente();
