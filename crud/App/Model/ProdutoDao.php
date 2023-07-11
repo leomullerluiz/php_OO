@@ -15,7 +15,16 @@
         }
 
         public function read(){
+            $sql = 'SELECT * FROM produtos';
+            //$sql = 'SELECT * FROM hollow';
+            $stmt = Connection::getConn()->prepare($sql);
+            $stmt->execute();
 
+            if($stmt->rowCount() > 0){
+                $queryResult = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+                return $queryResult;
+            }
+            return [];
         }
 
         public function update(Produto $produto){

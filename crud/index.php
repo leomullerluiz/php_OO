@@ -9,10 +9,15 @@
     $produto->setDescricao('165g');
     
     $produtoDao = new \App\Model\ProdutoDao();
-    $produtoDao->create($produto);
+    $produtoDao->read($produto);
 
-    //echo "<pre>";
-    //var_dump($produto);
+    foreach($produtoDao->read($produto) as $produto){
+        echo $produto['nome']."<br>";
+    }
+
+    echo "<hr>";
+    echo "<pre>";
+    var_dump($produtoDao->read($produto));
 
 
 ?>
