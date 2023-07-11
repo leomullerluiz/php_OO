@@ -28,7 +28,12 @@
         }
 
         public function update(Produto $produto){
-
+            $sql = 'UPDATE produtos set nome=?, descricao=? WHERE id=?';
+            $stmt = Connection::getConn()->prepare($sql);
+            $stmt->bindValue(1, $produto->getNome());
+            $stmt->bindValue(2, $produto->getDescricao());
+            $stmt->bindValue(3, $produto->getId());
+            $stmt->execute();
         }
 
         public function delete($id){

@@ -5,15 +5,17 @@
     require_once 'vendor/autoload.php';
 
     $produto = new \App\Model\Produto();
-    $produto->setNome('Lacta Chocolate ao Leite');
-    $produto->setDescricao('165g');
+    $produto->setNome('Lorem');
+    $produto->setDescricao('Ipsum');
+    $produto->setId(2);
     
     $produtoDao = new \App\Model\ProdutoDao();
-    $produtoDao->read($produto);
+    $produtoDao->update($produto);
+    //$produtoDao->create($produto);
 
-    foreach($produtoDao->read($produto) as $produto){
+    /*foreach($produtoDao->read($produto) as $produto){
         echo $produto['nome']."<br>";
-    }
+    }*/
 
     echo "<hr>";
     echo "<pre>";
