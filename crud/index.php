@@ -5,13 +5,15 @@
     require_once 'vendor/autoload.php';
 
     $produto = new \App\Model\Produto();
-    $produto->setNome('Lorem');
-    $produto->setDescricao('Ipsum');
-    $produto->setId(2);
+    $produto->setNome('Headphone');
+    $produto->setDescricao('JBL');
+    //$produto->setId(2);
     
     $produtoDao = new \App\Model\ProdutoDao();
-    $produtoDao->update($produto);
+    //$produtoDao->update($produto);
     //$produtoDao->create($produto);
+    $produtoDao->delete(5);
+
 
     /*foreach($produtoDao->read($produto) as $produto){
         echo $produto['nome']."<br>";

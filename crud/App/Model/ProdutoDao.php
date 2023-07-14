@@ -37,7 +37,10 @@
         }
 
         public function delete($id){
-
+            $sql = 'DELETE FROM produtos WHERE id=?';
+            $stmt = Connection::getConn()->prepare($sql);
+            $stmt->bindValue(1, $id);
+            $stmt->execute();
         }
 
 
